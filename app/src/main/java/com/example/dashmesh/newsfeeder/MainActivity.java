@@ -27,8 +27,13 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_newsfeed);
-        MobileAds.initialize(getApplicationContext(), "ca-app-pub-5488583213676305~4783501875");
+        //setSupportActionBar();
 
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+
+
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-5488583213676305~4783501875");
         initComponents();
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
