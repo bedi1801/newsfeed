@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "671245216699",
+    "firebase_url": "https://admob-app-id-4783501875.firebaseio.com",
+    "project_id": "admob-app-id-4783501875",
+    "storage_bucket": "admob-app-id-4783501875.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671245216699:android:fbaa97df3d1f5396",
+        "android_client_info": {
+          "package_name": "com.example.dashmesh.newsfeeder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671245216699-o0eqpth96450q5tst4tt4tcmsh3fcqu7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCQNIXQy9AK_mlVNJ5am9twRKzD4bYN_8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -12,6 +12,10 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,9 +27,12 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_newsfeed);
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-5488583213676305~4783501875");
 
         initComponents();
-
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         // Set reference to this activity
         boolean connected = false;
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -45,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
             // Start download RSS task
             task.execute("http://indianexpress.com/section/sports/football/feed/");
-
+            mAdView.loadAd(adRequest);
             // Debug the thread name
             Log.d("ITCRssReader", Thread.currentThread().getName());
         }
